@@ -5,9 +5,8 @@ from tkinter import *
 from tkinter import messagebox, ttk
 
 
-# ==========================================
 # 1. EXCEPCIONES PERSONALIZADAS
-# ==========================================
+
 class MenorEdadException(Exception):
   """Excepción lanzada si el usuario es menor de edad."""
 
@@ -20,9 +19,8 @@ class UsuarioBloqueadoException(Exception):
   pass
 
 
-# ==========================================
 # 2. CONFIGURACIÓN Y RELLENO DE LA BASE DE DATOS
-# ==========================================
+
 DB_FILE = "db_user.db"
 
 
@@ -70,9 +68,8 @@ def inicializar_db():
   conn.close()
 
 
-# ==========================================
 # 3. INTERFAZ GRÁFICA (TKINTER)
-# ==========================================
+
 class AppLogin:
 
   def __init__(self, window):
@@ -213,9 +210,9 @@ class AppLogin:
             f"Acceso restringido al contenido: Es menor de edad ({edad} años)."
         )
 
-      # ==========================================
+
       # SI PASA TODO: Contenido exclusivo para mayores activos
-      # ==========================================
+      
       Label(
           main_win,
           text=f"¡Bienvenido al sistema, {nickname}!",
